@@ -13,7 +13,6 @@ def posts():
     try:
         if (request.method == 'POST'):
             msg = urlchkk(request.form.get("url"))
-            # print(msg)
             return render_template('index.html', post=msg)
     except Exception as e:
         return e
